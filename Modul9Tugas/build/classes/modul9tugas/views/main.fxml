@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@styles.css"
+            fx:controller="modul9tugas.controllers.MainController"
+            prefHeight="600.0" prefWidth="1024.0">
+    
+    <children>
+        <VBox spacing="15" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <!-- Baris Filter -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <DatePicker fx:id="dpcDari" promptText="Dari Tanggal Pengadaan" prefWidth="180"/>
+                <DatePicker fx:id="dpcSampai" promptText="Sampai Tanggal Pengadaan" prefWidth="180"/>
+                <TextField fx:id="txtJudul" promptText="Judul Buku" prefWidth="180"/>
+                <ComboBox fx:id="cbxKategori" promptText="Kategori Buku" prefWidth="160"/>
+                <Button fx:id="btnFilter" text="Filter" onAction="#handleBtnFilter" styleClass="filter-button"/>
+            </HBox>
+
+            <!-- Baris Sorting -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <ComboBox fx:id="cbxSorting" promptText="Urutkan Berdasarkan" prefWidth="180"/>
+                <Button fx:id="btnSorting" text="Sorting" onAction="#handleButtonSorting" styleClass="sorting-button"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="btnReset" text="Reset" onAction="#handleBtnReset" styleClass="reset-button"/>
+            </HBox>
+
+            <!-- Tabel Buku -->
+            <TableView fx:id="tblViewBuku" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colKodeBuku" text="Kode Buku" prefWidth="75"/>
+                    <TableColumn fx:id="colKategori" text="Kategori" prefWidth="160"/>
+                    <TableColumn fx:id="colJudul" text="Judul" prefWidth="250"/>
+                    <TableColumn fx:id="colPengarang" text="Pengarang" prefWidth="97"/>
+                    <TableColumn fx:id="colPenerbit" text="Penerbit" prefWidth="113"/>
+                    <TableColumn fx:id="colTahun" text="Tahun Terbit" prefWidth="101"/>
+                    <TableColumn fx:id="colEdisi" text="Edisi" prefWidth="72"/>
+                    <TableColumn fx:id="colPengadaan" text="Tanggal Pengadaan" prefWidth="127"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </children>
+</AnchorPane>

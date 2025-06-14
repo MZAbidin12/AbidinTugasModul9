@@ -1,0 +1,60 @@
+.root {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-background-color: #f5f7fa;
+}
+
+.reset-button{
+    -fx-background-color: #e74c3c; /* Merah */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.reset-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+
+.sorting-button{
+    -fx-background-color: #4A90E2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.sorting-button:hover {
+    -fx-background-color: #357ABD;
+}
+
+.filter-button{
+    -fx-background-color: #4A90E2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.filter-button:hover {
+    -fx-background-color: #357ABD;
+}
+
+.text-field, .combo-box, .date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-field:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #4A90E2;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4A90E2;
+}
+
+.table-view .column-header {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+
